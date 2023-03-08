@@ -9,8 +9,10 @@
     "prettier:fix": "prettier --write .",
     "eslint": "eslint .",
     "eslint:fix": "eslint --fix .",
-    "lint": "npm run prettier && npm run eslint",
-    "lint:fix": "npm run prettier:fix && npm run eslint:fix"
+    "solhint": "solhint contracts/**/*.sol",
+    "solhint:fix": "solhint --fix contracts/**/*.sol",
+    "lint": "npm run prettier && npm run eslint && npm run solhint",
+    "lint:fix": "npm run prettier:fix && npm run eslint:fix && npm run solhint:fix"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +24,8 @@
     "eslint-config-prettier": "^8.6.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "prettier-plugin-solidity": "^1.1.3",
+    "solhint": "^3.4.0"
   }
 }
